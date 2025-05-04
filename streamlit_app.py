@@ -33,7 +33,7 @@ st.logo(
 # Main layout
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
-    st.title("🔍 :red[CrewAI] Research Assistant", anchor=False)
+    st.title("🔍 Digital da Vinci's Research Assistant", anchor=False)
 
 # Render sidebar and get selection (provider and model)
 selection = render_sidebar()
@@ -64,7 +64,7 @@ input_col1, input_col2, input_col3 = st.columns([1, 3, 1])
 with input_col2:
     task_description = st.text_area(
         "What would you like to research?",
-        value="Research the latest AI Agent news in February 2025 and summarize each.",
+        value="Research the latest AI Agent transformations and their impact on the future of work.",
         height=68
     )
 
@@ -82,7 +82,7 @@ if start_research:
             # Single output capture context.
             with capture_output(output_container):
                 researcher = create_researcher(selection)
-                task = create_research_task(researcher, task_description)
+                task = create_research_task(researcher, task_description + "your resources are harvard.edu, arxiv.org, and google.com, techcrunch, forbes" )
                 result = run_research(researcher, task)
                 status.update(label="✅ Research completed!", state="complete", expanded=False)
         except Exception as e:
