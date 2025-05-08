@@ -137,6 +137,8 @@ def create_research_task(researcher, task_description):
         Format the output in clean markdown (without code block markers or backticks) using the following structure:
         # Title
         - Title of the report
+
+        [sentence about the report's focus]
         ## Executive Summary
         - Brief overview of the research topic (2-3 sentences)
         - Key highlights and main conclusions
